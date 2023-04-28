@@ -96,12 +96,8 @@
                   <div id="navbarmenu1" style="display: block;">
                   <nav class="main-nav" role="navigation">
                      <ul class="main-menu">
-                        <li><a href="https://thenamastenepal.com/#section0"><i class="fa-solid fa-hashtag"></i> namaste</a></li>
-                        <li><a href="https://thenamastenepal.com/#section3"><i class="fa-solid fa-hashtag"></i> pins</a></li>
-                        <li><a href="https://thenamastenepal.com/#section4"><i class="fa-solid fa-hashtag"></i> about-us</a></li>
-                        <li><a href="https://thenamastenepal.com/#section1"><i class="fa-solid fa-hashtag"></i> sneak-peek</a></li>
-                        <li><a href="https://thenamastenepal.com/#section2"><i class="fa-solid fa-hashtag"></i> members</a></li>
-                        <li><a href="https://thenamastenepal.com/#section5"><i class="fa-solid fa-hashtag"></i> contact</a></li>
+                        <li><a href="#section0"><i class="fa-solid fa-hashtag"></i> graph</a></li>
+                        <li><a href="#section5"><i class="fa-solid fa-hashtag"></i> contact</a></li>
                      </ul>
                   </nav>
                   </div>
@@ -365,9 +361,10 @@ const encodedColor = encodeURIComponent(color);
 
 // Create an image element and set its "src" attribute to the appropriate URL
 const img = document.createElement("img");
-img.src = `https://quickchart.io/chart?bkg=%23fffefe&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Messages%22%2C%22backgroundColor%22%3A%22${encodedColor}50%22%2C%22borderColor%22%3A%22${encodedColor}%22%2C%22borderWidth%22%3A2%2C%22data%22%3A%5B${encodedData}%5D%2C%22datalabels%22%3A%7B%22align%22%3A%22center%22%2C%22anchor%22%3A%22center%22%7D%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22legend%22%3A%7B%22position%22%3A%22top%22%7D%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22${encodedName}%22%7D%2C%22plugins%22%3A%7B%22roundedBars%22%3Atrue%2C%22datalabels%22%3A%7B%22color%22%3A%22%23000000%22%7D%7D%7D%7D`;
-
+// img.src = `https://quickchart.io/chart?bkg=%232f3136&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Messages%22%2C%22backgroundColor%22%3A%22${encodedColor}50%22%2C%22borderColor%22%3A%22${encodedColor}%22%2C%22borderWidth%22%3A2%2C%22data%22%3A%5B${encodedData}%5D%2C%22datalabels%22%3A%7B%22align%22%3A%22center%22%2C%22anchor%22%3A%22center%22%7D%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22legend%22%3A%7B%22position%22%3A%22top%22%7D%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22${encodedName}%22%7D%2C%22plugins%22%3A%7B%22roundedBars%22%3Atrue%2C%22datalabels%22%3A%7B%22color%22%3A%22%23000000%22%7D%7D%7D%7D`;
+img.src = `https://quickchart.io/chart?bkg=%232f3136&c=%7B%0A%20%20type%3A%20%27bar%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27Sun%27%2C%20%27Mon%27%2C%20%27Tue%27%2C%20%27Wed%27%2C%20%27Thu%27%2C%20%27Fri%27%2C%20%27Sat%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20label%3A%20%27Messages%27%2C%0A%20%20%20%20%20%20%20%20backgroundColor%3A%20%27${encodedColor}50%27%2C%0A%20%20%20%20%20%20%20%20borderColor%3A%20%27${encodedColor}%27%2C%0A%20%20%20%20%20%20%20%20borderWidth%3A%202%2C%0A%20%20%20%20%20%20%20%20data%3A%20%5B${encodedData}%5D%2C%0A%20%20%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20align%3A%20%27center%27%2C%0A%20%20%20%20%20%20%20%20%20%20anchor%3A%20%27center%27%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%5D%2C%0A%20%20%7D%2C%0A%20%20options%3A%20%7B%0A%20%20%20%20responsive%3A%20true%2C%0A%20%20%20%20legend%3A%20%7B%0A%20%20%20%20%20%20position%3A%20%27top%27%2C%0A%20%20%20%20%20%20labels%3A%20%7B%0A%20%20%20%20%20%20%20%20fontColor%3A%20%27%23fff%27%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20title%3A%20%7B%0A%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20text%3A%20%27${encodedName}%27%2C%0A%20%20%20%20%20%20fontColor%3A%20%27%23fff%27%0A%20%20%20%20%7D%2C%0A%20%20%20%20plugins%3A%20%7B%0A%20%20%20%20%20%20roundedBars%3A%20true%2C%0A%20%20%20%20%20%20datalabels%3A%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20%27%23fff%27%2C%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20ticks%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20fontColor%3A%20%27%23fff%27%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%5D%2C%0A%20%20%20%20%20%20xAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20ticks%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20fontColor%3A%20%27%23fff%27%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%7D%0A%20%20%7D%2C%0A%7D`
 // Find the div with id "the image" and append the image to it
+img.style.borderRadius = "10px";
 const imageDiv = document.getElementById("imagehere");
 imageDiv.appendChild(img);
 
