@@ -353,15 +353,19 @@
 </script>
 
 <script>
-   // Get the value of the "data" parameter from the URL
+// Get the value of the "data" parameter from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const data = urlParams.get("data");
+const name = urlParams.get("name");
+const color = urlParams.get("color");
 
 const encodedData = encodeURIComponent(data);
+const encodedName = encodeURIComponent(name);
+const encodedColor = encodeURIComponent(color);
 
 // Create an image element and set its "src" attribute to the appropriate URL
 const img = document.createElement("img");
-img.src = `https://quickchart.io/chart?bkg=%23fffefe&c=${encodedData}`;
+img.src = `https://quickchart.io/chart?bkg=%23fffefe&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22${encodedName}%22%2C%22backgroundColor%22%3A%22${encodedColor}50%22%2C%22borderColor%22%3A%22${encodedColor}%22%2C%22borderWidth%22%3A2%2C%22data%22%3A%5B${encodedData}%5D%2C%22datalabels%22%3A%7B%22align%22%3A%22center%22%2C%22anchor%22%3A%22center%22%7D%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22legend%22%3A%7B%22position%22%3A%22top%22%7D%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22$get[lable]%22%7D%2C%22plugins%22%3A%7B%22roundedBars%22%3Atrue%2C%22datalabels%22%3A%7B%22color%22%3A%22%23000000%22%7D%7D%7D%7D`;
 
 // Find the div with id "the image" and append the image to it
 const imageDiv = document.getElementById("imagehere");
