@@ -494,6 +494,10 @@ html {
     color: #343581;
 }
 
+.canvas {
+    background-color: #fff;
+    border-radius: 10px;
+  }
 
 
 button {

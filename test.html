@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week Leaderboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+  <script>
+    // Fetch the API
+    fetch("https://api.lanyard.rest/v1/users/773577115546812447")
+      .then(response => response.json())
+      .then(data => {
+        // Extract the week leaderboard data
+        const weeklb = data.data.kv.weeklb.replace(/{"data":"|"}/g, '');
+        const weeklbArray = weeklb.split("#AND#&");
+        weeklbArray.pop();
+        const chartData = weeklbArray.filter((_, i) => i % 2 !== 0).map(Number);
+        const chartLabels = weeklbArray.filter((_, i) => i % 2 === 0);
+        
+        // Create the chart using Chart.js
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: chartLabels,
+            datasets: [{
+              label: 'This Week Messages',
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgb(255, 99, 132)',
+              borderWidth: 1,
+              data: chartData,
+              datalabels: {
+                anchor: 'center',
+                align: 'center'
+              }
+            }]
+          },
+          options: {
+            responsive: true,
+            legend: {
+              position: 'top'
+            },
+            title: {
+              display: true,
+              text: 'Weekly Messages Leaderboard'
+            },
+            plugins: {
+              roundedBars: true,
+              datalabels: {
+                display: true
+              }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
