@@ -97,7 +97,7 @@
                   <nav class="main-nav" role="navigation">
                      <ul class="main-menu">
                         <li><a href="#section0"><i class="fa-solid fa-hashtag"></i> namaste</a></li>
-                        <li><a href="#section3"><i class="fa-solid fa-hashtag"></i> pins</a></li>
+                        <li><a href="#section3"><i class="fa-solid fa-hashtag"></i> events</a></li>
                         <li><a href="#section4"><i class="fa-solid fa-hashtag"></i> leadersboard</a></li>
                         <li><a href="#section1"><i class="fa-solid fa-hashtag"></i> sneak-peek</a></li>
                         <li><a href="#section2"><i class="fa-solid fa-hashtag"></i> members</a></li>
@@ -211,10 +211,109 @@
             <div class="section-heading">
                <h2>Pins & Announcements</h2>
                <div class="line-dec"></div>
-               <span>Last updated: July 6th, 2022
+               <span>Current Running Events wull be updated on the front page of this website too. This log shows lists of our upcoming and completed events.
                </span>
             </div>
-            <p>Why are you gay?</p>>
+            <div class="isotope-wrapper">
+               <form class="isotope-toolbar">
+                  <label><input type="radio" id="eventactive" data-type="upcoming" name="isotope-filter" />
+                     <span>Upcoming</span></label>
+                  <label><input type="radio" data-type="ended" name="isotope-filter" />
+                     <span>Ended</span></label>
+               </form>
+               <div class="isotope-box">
+                  <div class="isotope-item" data-type="ended" style="width:100%">
+                     <div class="left-image-post">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="left-image">
+                                 <div class="flip">
+                                    <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                                       <h1 class="text-shadow">MUSIC & GUITAR</hi>
+                                    </div>
+                                    <div class="back">
+                                       <h2>Winners</h2>
+                                       <p>NA</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="right-text">
+                                 <h4>Hangout Place's First Music Event</h4>
+                                 <p>
+                                    We hosted a fantastic community event where members from our Discord community displayed their singing and guitar instrumental talents. It was an incredible showcase of skill and passion, marking a significant milestone for us.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="isotope-item" data-type="upcoming" style="width:100%">
+                     <div class="left-image-post">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="left-image">
+                                 <div class="flip">
+                                    <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                                       <h1 class="text-shadow">Not Decided (probably music lol)</hi>
+                                    </div>
+                                    <div class="back">
+                                       <h2>Winners</h2>
+                                       <p>Not Ended Yet</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="right-text">
+                                 <h4>Starting 25th Mar, 2023</h4>
+                                 <p>
+                                    Daddy chill, we are deciding only rn.
+                                 </p>
+                                 <div class="white-button">
+                                    <a href="https://discord.gg/nepal">Join Discord To Participate</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  
+                  <div class="isotope-item" data-type="upcoming" style="width:100%">
+                     <div class="left-image-post">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="left-image">
+                                 <div class="flip">
+                                    <div class="front" style="background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                                       <h1 class="text-shadow">Dashain Event</hi>
+                                    </div>
+                                    <div class="back">
+                                       <h2>Winners</h2>
+                                       <p>Not Ended Yet</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="right-text">
+                                 <h4>Dashain Special</h4>
+                                 <p>
+                                    Daddy chill, we are deciding only rn.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+             </div>
          </div>
       </section>
 
@@ -227,7 +326,7 @@
             </div>
             <div class="isotope-wrapper">
                <form class="isotope-toolbar">
-                  <label><input type="radio" data-type="week" name="isotope-filter" />
+                  <label><input type="radio" id="lbactive" data-type="week" name="isotope-filter" />
                      <span>Week</span></label>
                   <label><input type="radio" data-type="cash" name="isotope-filter" />
                      <span>Cash</span></label>
@@ -516,7 +615,8 @@ height="600"></widgetbot>
 
 
 <script>
-   document.querySelector('input[type="radio"]').click()
+   document.getElementById('eventactive').click()
+   document.getElementById('lbactive').click()
    // Fetch the API
    fetch("https://api.lanyard.rest/v1/users/773577115546812447")
      .then(response => response.json())
