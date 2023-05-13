@@ -169,7 +169,7 @@
             <div class="section-heading">
                <h1>Namaste Nepal</h1><br>
                <div class="line-dec"></div>
-               <span style="font-size: larger;">This server's general purpose is to give people a simple, but unique environment, mainly for chatting. What this server offers is a chill vibe with everyone being a bit weird at times, but overall we like to treat each other as equals and have fun together in the process.  We host all forms of community activities such as - podcasts, meme competitions, music events, fun games, movie nights and weekly giveaways.
+               <span style="font-size: larger; text-align: justify;">This server's general purpose is to give people a simple, but unique environment, mainly for chatting. What this server offers is a chill vibe with everyone being a bit weird at times, but overall we like to treat each other as equals and have fun together in the process.  We host all forms of community activities such as - podcasts, meme competitions, music events, fun games, movie nights and weekly giveaways.
                </span>
                <br><br>
                <div class="white-button">
@@ -185,7 +185,7 @@
                      </div>
                      <div class="col-md-6">
                         <div class="right-text">
-                           <p>
+                           <p style="text-align: justify;">
                               Unleash Your Winning Potential! Welcome to our server, where giveaways are a way of life. From Nitro to Spotify and more, our tantalizing contests offer you a shot at extraordinary rewards. Join the excitement and let the winning frenzy commence!
                            </p>
                            <div class="ig-button">
@@ -206,7 +206,7 @@
                      </div>
                      <div class="col-md-6">
                         <div class="right-text">
-                           <p>
+                           <p style="text-align: justify;">
                               Rise through the Ranks, Earn Epic Rewards! Our server values your participation and rewards it generously. Join the league of active members and watch your points stack up. Unlock exclusive perks like Nitro and Spotify subscriptions from our dedicated rewards channel. It's time to be recognized and enjoy the fruits of your activity!
                            </p>
                            <div class="ig-button">
@@ -466,16 +466,16 @@
                      <span>Streak</span></label>
                </form>
                <div class="isotope-box">
-                  <div class="isotope-item" data-type="week" style="width:90%">
+                  <div class="isotope-item" data-type="week" style="min-width:100%">
                      <canvas class="canvas active-canvas" id="weeklb"></canvas>
                   </div>
-                  <div class="isotope-item" data-type="cash" style="width:90%">
+                  <div class="isotope-item" data-type="cash" style="min-width:100%;">
                      <canvas class="canvas active-canvas" id="cashlb"></canvas>
                   </div>
-                  <div class="isotope-item" data-type="streak" style="width:90%">
+                  <div class="isotope-item" data-type="streak" style="min-width:100%">
                      <canvas class="canvas active-canvas" id="replb"></canvas>          
                   </div>
-                  <div class="isotope-item" data-type="reps" style="width:90%">
+                  <div class="isotope-item" data-type="reps" style="min-width:100%">
                      <canvas class="canvas active-canvas" id="streaklb"></canvas>
                   </div>
                </div>
@@ -931,6 +931,7 @@ weeklb = data.data.kv.repslb.replace(/{"data":"|"}/g, '');
     }
   }
        });
+
 
        // streak
        weeklb = data.data.kv.streaklb.replace(/{"data":"|"}/g, '');
