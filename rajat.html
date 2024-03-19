@@ -194,6 +194,8 @@
     return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '❓');
   }
 
+  
+
    function getDiscordTimestamp(snowflakeId) {
   const discordEpoch = 1420070400000;
   const timestamp = (snowflakeId / 4194304 + discordEpoch) / 1000;
